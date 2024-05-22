@@ -1,0 +1,36 @@
+<app-map></app-map>
+<!--Table-->
+<table class="table table-striped" style="margin-top:500px">
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Reported By</th>
+      <th>Time Reported</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let pig of pigs">
+      <td>{{pig.location}}</td>
+      <td>{{pig.name}}</td>
+      <td>{{pig.time}}</td>
+      <td>{{pig.status}}</td>
+      <td><a routerLink="/more-info/{{pig.id}}">More Info</a></td>
+      <td>
+        <button type="button" class="btn btn-danger" routerLink="/confirm/{{pig.id}}"><b>X</b></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-dark" routerLink="/confirm-status/{{pig.id}}" >CHANGE STATUS</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="d-grid gap-2">
+  <button  type="button" class="btn btn-dark" routerLink="/create-report">CREATE REPORT</button>
+</div>
+
+
+
+ 

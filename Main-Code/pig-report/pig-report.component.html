@@ -1,0 +1,102 @@
+<h3 style="text-align:center;margin-top:30px;font-family:'Times New Roman', Times, serif">Feed the below details to save into the data table and help Farmer Hogget!</h3>
+<div class="formBox">
+    <div class="container-fluid">
+      
+        <div class="row g-3 align-items-center">
+         <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Reported By:</label>
+         </div>
+        <div class="col-auto">
+          <input type="text" #name class="form-control" aria-describedby="passwordHelpInline" placeholder="Input your name.">
+        </div>
+       
+       
+      
+      </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Breed type:</label>
+        </div>
+    
+      <div class="col-auto">
+       <select style="margin-left:10px" #type>
+        <option>Pot Bellied</option>
+        <option>Unknown</option>
+       </select>
+       </div>
+ 
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Location:</label>
+        </div>
+    
+      <div class="col-auto">
+       <input type="text" #location class="form-control" style="margin-left:22px;margin-top:5px;margin-bottom:5px">
+       </div>
+ 
+    </div>
+    <div class="row g-3 align-items-center">
+      <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Latitude:</label>
+      </div>
+  
+    <div class="col-auto">
+    <input type="number" #lat style="margin-left:25px;margin-top:5px;margin-bottom:5px" class="form-control">
+     </div>
+
+  </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Longitude:</label>
+        </div>
+    
+      <div class="col-auto">
+     <input type="number" #lon style="margin-left:12px;margin-top:5px;margin-bottom:5px" class="form-control">
+       </div>
+ 
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">LandMark:</label>
+        </div>
+    
+        <div class="col-auto" style="margin-left:15px">
+            <input #landmark type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="under the fountain.">
+          </div>
+          <br>
+ 
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Height (cm):</label>
+        </div>
+    
+        <div class="col-auto" style="margin-left:10px">
+            <input #height style="margin-top:6px;margin-left:-7px"type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Ex. 75">
+          </div>
+ <br><br>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Weight (lb):</label>
+        </div>
+    
+        <div class="col-auto" style="margin-left:10px">
+            <input #weight style="margin-top:6px" type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Ex. 105">
+          </div>
+ 
+    </div>
+
+    
+
+    </div>
+    
+    
+</div>
+<div class="d-grid gap-2">
+    <button class="btn btn-dark" type="button" (click)="save(name.value,type.value,location.value,landmark.value,height.value,weight.value,lat.value,lon.value)">SAVE</button>
+    
+  </div>
